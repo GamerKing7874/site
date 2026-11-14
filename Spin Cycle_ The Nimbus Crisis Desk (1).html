@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spin Cycle: The Nimbus Keynote Crisis</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9eef5;--ink:#1b2433;--card:#fff;--mute:#5d6b80;--red:#d62f3a;--amber:#c98a12;--teal:#23806f;--line:#c9d3e0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141b27;--ink:#e9eef5;--card:#1f2a3b;--mute:#9aa8bd;--line:#33425a;--amber:#f2c14e;--teal:#4cc2a8}}
+:root[data-theme="dark"]{--bg:#141b27;--ink:#e9eef5;--card:#1f2a3b;--mute:#9aa8bd;--line:#33425a;--amber:#f2c14e;--teal:#4cc2a8}
+*{box-sizing:inherit}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.5 "Source Serif 4",Georgia,serif;min-height:100%}
+main{max-width:560px;margin:0 auto;padding:16px 16px 40px}
+h1,h2,.hd{font-family:Archivo,"Arial Narrow",Arial,sans-serif;font-stretch:75%;font-weight:800;line-height:1.05;margin:0}
+.chy{display:flex;align-items:stretch;margin:4px 0 14px;font-family:Archivo,Arial,sans-serif}
+.chy b{background:var(--red);color:#fff;font-stretch:75%;font-weight:900;padding:6px 10px;font-size:14px;letter-spacing:.02em}
+.chy span{flex:1;background:var(--ink);color:var(--bg);padding:6px 10px;font-size:14px;font-weight:600;font-stretch:90%}
+.meters{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin-bottom:14px}
+.m{font-family:Archivo,Arial,sans-serif;font-size:13px;font-weight:700;font-stretch:90%}
+.m div.bar{height:8px;background:var(--line);border-radius:4px;margin-top:3px;overflow:hidden}
+.m i{display:block;height:100%;width:50%;transition:width .5s}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px}
+.time{font-family:Archivo,Arial,sans-serif;font-weight:700;font-size:14px;color:var(--mute)}
+h2{font-size:30px;margin:4px 0 8px}
+p{margin:0 0 10px}
+button{font:inherit;cursor:pointer}
+.opt{display:block;width:100%;text-align:left;background:var(--card);color:var(--ink);border:2px solid var(--ink);border-radius:8px;padding:12px 14px;margin-bottom:10px}
+.opt:hover,.opt:focus-visible{background:var(--ink);color:var(--bg);outline:none}
+.opt strong{font-family:Archivo,Arial,sans-serif;font-stretch:85%;font-weight:800;display:block}
+.go{background:var(--red);color:#fff;border:0;border-radius:8px;padding:12px 18px;font-family:Archivo,Arial,sans-serif;font-weight:800;font-stretch:85%;font-size:17px}
+.go:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.fx{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}
+.fx span{font-family:Archivo,Arial,sans-serif;font-size:13px;font-weight:700;padding:3px 8px;border-radius:4px;background:var(--bg)}
+.up{color:var(--teal)}.dn{color:var(--red)}
+.quote{border-left:4px solid var(--red);padding-left:12px;color:var(--mute);font-style:italic}
+.big{font-size:44px}
+@media (prefers-reduced-motion:reduce){.m i{transition:none}}
+
+.hero{background:var(--ink);color:var(--bg);border-radius:10px;padding:6px 10px;margin-bottom:12px;overflow:hidden}
+.hero svg{display:block;width:100%;height:84px}
+.sm{animation:rise 2.6s ease-in infinite;transform-box:fill-box}
+.sm:nth-of-type(2){animation-delay:.9s}.sm:nth-of-type(3){animation-delay:1.7s}
+@keyframes rise{0%{opacity:.9;transform:translateY(0) scale(.6)}100%{opacity:0;transform:translateY(-26px) scale(1.5)}}
+.dots{display:flex;gap:6px;margin:0 0 8px}.dots i{width:26px;height:6px;border-radius:3px;background:var(--line)}.dots i.on{background:var(--red)}
+.case{display:inline-block;background:var(--red);color:#fff;font:800 12px Archivo,Arial,sans-serif;padding:2px 8px;border-radius:3px;letter-spacing:.04em}
+@media (prefers-reduced-motion:reduce){.sm,.mood i{animation:none;transition:none}}
+
+.feed{margin-top:14px}.fh{display:flex;justify-content:space-between;font:800 15px Archivo,Arial,sans-serif;font-stretch:80%;margin-bottom:8px}
+.mood{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--red),var(--amber),var(--teal));position:relative;margin-bottom:12px}.mood i{position:absolute;top:-4px;width:6px;height:18px;border-radius:3px;background:var(--ink);transition:left .6s}
+.po{display:flex;gap:10px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--line);border-radius:8px;padding:8px 10px;margin-bottom:8px;font-size:15px;line-height:1.35}
+.po.A{border-left-color:var(--red)}.po.T{border-left-color:var(--teal)}.po.M{border-left-color:var(--amber)}
+.av{flex:none;width:30px;height:30px;border-radius:50%;color:#fff;font:800 14px/30px Archivo,Arial,sans-serif;text-align:center}
+.A .av{background:var(--red)}.T .av{background:var(--teal)}.M .av{background:var(--amber);color:#1b2433}
+.po b{font:700 13px Archivo,Arial,sans-serif;display:block}
+.trk{font:700 13px Archivo,Arial,sans-serif;margin-top:12px}.trk .bar{height:8px;background:var(--line);border-radius:4px;margin:4px 0;overflow:hidden}.trk .bar i{display:block;height:100%;background:var(--ink)}
+.nw{background:var(--amber);color:#1b2433;font:800 11px Archivo,Arial,sans-serif;padding:1px 6px;border-radius:3px;margin-left:6px;vertical-align:middle}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+var CEO="Dax Morrow",CO="Nimbus Silicon";
+var SV={
+chip:'<svg viewBox="0 0 300 84" fill="none" stroke="currentColor" stroke-width="3"><rect x="118" y="30" width="64" height="44" rx="6"/><path d="M130 30v-9M150 30v-9M170 30v-9M130 74v8M150 74v8M170 74v8M118 44h-9M118 62h-9M182 44h9M182 62h9"/><circle class="sm" cx="140" cy="16" r="8" fill="#d62f3a" stroke="none"/><circle class="sm" cx="158" cy="14" r="6" fill="#d62f3a" stroke="none"/><circle class="sm" cx="150" cy="18" r="7" fill="#d62f3a" stroke="none"/><path d="M20 78h60M220 78h60" stroke-width="2" opacity=".4"/></svg>',
+lock:'<svg viewBox="0 0 300 84" fill="none" stroke="currentColor" stroke-width="3"><rect x="70" y="14" width="44" height="62" rx="4"/><path d="M80 28h24M80 42h24M80 56h24"/><rect x="126" y="14" width="44" height="62" rx="4"/><path d="M136 28h24M136 42h24M136 56h24"/><rect x="190" y="42" width="46" height="34" rx="5" fill="#d62f3a" stroke="none"/><path d="M200 42v-10a13 13 0 0 1 26 0" stroke="#d62f3a"/><circle class="sm" cx="213" cy="58" r="5" fill="currentColor" stroke="none"/></svg>',
+memo:'<svg viewBox="0 0 300 84" fill="none" stroke="currentColor" stroke-width="3"><path d="M90 14h60v62H90z"/><path d="M100 30h40M100 42h40M100 54h26"/><path class="sm" d="M170 20h40v34h-40z" fill="#d62f3a" stroke="none"/><path class="sm" d="M190 40h38v30h-38z" stroke-width="2"/><path d="M20 78h260" stroke-width="2" opacity=".4"/></svg>'};
+var SC=[
+{n:"The Meltdown",tag:"Keynote demo fiasco",sv:"chip",intro:"Last night "+CEO+" unveiled the Aurora X1. It overheated on stage, smoke rolled across the screen, and a hot mic caught: <i>\"Relax, they'll buy it anyway.\"</i> 12 million views by breakfast.",
+a:{t:"Day 1, 6:52 AM",h:"The clip",b:"Your phone won't stop buzzing. What goes out first?",o:[
+["Short statement: \"We saw it. Investigating.\"",[6,2,-6,-3],"Calm and quick. Reporters have something to quote besides the clip.","b1"],
+["Stay silent until the facts are in",[-8,-5,14,5],"Silence reads as hiding. The CEO loves your restraint.","b2"],
+["Meme back at the internet",[-12,3,12,-6],"Every share carries the hot-mic clip with it.","b3"]]},
+b1:{t:"Day 1, 11:30 AM",h:"Analysts on hold",b:"Three analysts want a call before the market digs in.",o:[
+["Brief them honestly, including unknowns",[7,6,-5,-2],"Analysts like \"we don't know yet.\" The stock steadies.","c1"],
+["Promise a fix date",[-6,9,4,3],"Stock pops. Engineering hasn't agreed to that date.","c2"]]},
+b2:{t:"Day 2, 8:15 AM",h:"The leaked email",b:"A reporter has an email showing engineers flagged a thermal problem six weeks ago. Story runs at 10.",o:[
+["Confirm it and name the fix",[5,-4,-8,-8],"Painful, but you're the source of your own story.","c1"],
+["Blame a rogue team",[-15,0,15,6],"Engineers hear within the hour. A second leak follows.","c2"]]},
+b3:{t:"Day 2, 9:00 AM",h:"Customers revolt",b:"Two big cloud customers threaten to walk.",o:[
+["Offer credits and swaps",[8,-7,-5,-3],"Both praise you on the record. The CFO texts: \"Ouch.\"","c1"],
+["Hold the line: contracts are contracts",[-8,-3,7,5],"Technically right. One tells a journalist it's weighing a switch.","c2"]]},
+c1:{t:"Day 7, 10:00 AM",h:"The apology video",b:"Time for "+CEO+" to go on camera. Pick the script.",o:[
+["Plain apology, no hedging",[12,4,-12,-4],"Ninety seconds. Comments go from furious to cautiously respectful."],
+["Polished vision speech",[-2,2,3,6],"It sounds like a keynote. People remember it as one."]]},
+c2:{t:"Day 5, 2:00 PM",h:"The podcast offer",b:"A huge podcast offers the CEO a live hour. He's keen.",o:[
+["Yes, with two days of prep",[6,3,-3,5],"Warm, specific, only slightly defensive."],
+["Let him wing it",[-9,-8,10,8],"Fifty good minutes, then he calls critics \"tourists.\""]]},
+d1:{t:"Day 10, 10:00 AM",h:"The relaunch",b:"The Aurora X1 is fixed. How do you bring it back?",o:[
+["Ship quietly, let reviews speak",[4,2,-4,2],"Reviewers push it hard. It holds."],
+["Livestream a redo with an outside tester",[10,4,-8,-5],"He sweats. The demo works."]]},
+d2:{t:"Day 10, 2:00 PM",h:"The long read",b:"A reporter is writing \"Inside Nimbus's meltdown.\" Cooperate?",o:[
+["Give access to engineers",[8,2,-7,-4],"A human, balanced story."],
+["Decline the interview",[-7,-2,8,3],"The piece runs one-sided."]]}},
+{n:"The Breach",tag:"Cloud logs exposed",sv:"lock",intro:"A bug in the Nimbus Cloud console exposed usage logs for 40,000 customers for three days. A security researcher posted proof at 6 AM and tagged "+CEO+".",
+a:{t:"Day 1, 6:20 AM",h:"The post",b:"The researcher has 800k followers. What's your opening move?",o:[
+["Disclose everything we know, now",[7,-3,-4,-5],"Rough, but nobody is accusing you of hiding.","b1"],
+["Wait for forensics to finish",[-9,-4,12,4],"Screenshots keep spreading without you.","b2"],
+["Say there's \"no evidence of misuse\"",[-12,2,10,6],"True, so far. It sounds like a shrug.","b3"]]},
+b1:{t:"Day 1, 1:00 PM",h:"Regulators call",b:"Two regulators want a briefing today.",o:[
+["Cooperate fully, open the logs",[8,-3,-6,-2],"They thank you in a statement.","c1"],
+["Share only what's required",[-4,2,5,3],"Legal approves. Press hears \"minimal cooperation.\"","c2"]]},
+b2:{t:"Day 2, 7:40 AM",h:"Researcher goes viral",b:"Their thread passes 5 million views.",o:[
+["Thank them publicly and invite a call",[6,0,-8,-2],"They post a thumbs-up. The internet reacts.","c1"],
+["Send a legal threat letter",[-16,-3,18,5],"They post the letter. It's the new top story.","c2"]]},
+b3:{t:"Day 2, 10:30 AM",h:"CISOs demand answers",b:"Security chiefs at five big customers want a call.",o:[
+["Put "+CEO+" on the call",[5,2,-4,-6],"He listens more than talks. Two CISOs ask for follow-ups.","c1"],
+["Send an FAQ instead",[-6,-2,6,3],"Fast. Customers read it as a brush-off.","c2"]]},
+c1:{t:"Day 4, 9:00 AM",h:"Make it right",b:"What do affected customers get?",o:[
+["Free monitoring and an audit for all",[10,-5,-8,0],"Expensive, visible, and quoted in headlines."],
+["A patch note and apology",[-4,3,3,5],"Clean and cheap. Some customers feel unseen."]]},
+c2:{t:"Day 4, 3:00 PM",h:"\"Will it happen again?\"",b:"Every reporter is asking the same question.",o:[
+["Commit to a published outside audit",[9,-2,-7,-3],"You can't un-promise it. Press gives you a chance."],
+["\"We're confident in our systems\"",[-10,2,10,6],"Then a smaller bug surfaces two days later."]]},
+d1:{t:"Day 7, 10:00 AM",h:"Inquiry closes",b:"Regulators close the inquiry with a warning.",o:[
+["Publish findings and fixes",[9,3,-7,-3],"Rare transparency. Peers copy it."],
+["Say nothing and move on",[-3,1,3,3],"Quiet, but the warning leaks anyway."]]},
+d2:{t:"Day 7, 3:00 PM",h:"Customer exodus",b:"Two customers announce they are leaving.",o:[
+["Wish them well, offer a way back",[5,-1,-5,-2],"Gracious. Others take note."],
+["Call it overblown",[-9,-3,9,5],"A third customer leaves the next day."]]}},
+{n:"The Memo",tag:"Layoff leak",sv:"memo",intro:"An internal memo leaks: 2,000 jobs cut for \"efficiency.\" The same morning, a photo of "+CEO+" on a new yacht starts trending.",
+a:{t:"Day 1, 7:30 AM",h:"The leak",b:"Staff are reading the memo on social media. Respond.",o:[
+["Confirm it and explain the reasoning",[3,-3,-5,-4],"Straight, if painful. Staff hear it from you.","b1"],
+["Say the memo is \"out of context\"",[-10,2,11,5],"Someone posts the full memo. It's worse.","b2"],
+["Delay until HR has told everyone",[-6,-1,8,3],"Employees hear about it from reporters first.","b3"]]},
+b1:{t:"Day 2, 9:00 AM",h:"Town hall demand",b:"Employees want the CEO in front of them.",o:[
+["Live Q&A, no pre-screened questions",[8,-2,-8,-5],"Rough 60 minutes. Staff quote his answers favorably.","c1"],
+["Pre-recorded message",[-3,1,2,4],"Smooth, and a little cold.","c2"]]},
+b2:{t:"Day 2, 11:00 AM",h:"Union rep on TV",b:"A union rep holds up the memo on live TV.",o:[
+["Invite the union to talks",[6,-1,-6,-3],"The rep calls it \"a start.\" Tone softens.","c1"],
+["No comment",[-8,1,9,4],"Empty chair at the debate segment.","c2"]]},
+b3:{t:"Day 2, 3:00 PM",h:"Investors ask about severance",b:"They want numbers before the close.",o:[
+["Generous package, announced publicly",[9,-5,-6,0],"Costly. The press covers it kindly.","c1"],
+["Standard package",[-5,3,4,4],"Investors approve. Employees circulate screenshots.","c2"]]},
+c1:{t:"Day 4, 10:00 AM",h:"The yacht photo",b:"The photo is still trending. Address it?",o:[
+["Yes: "+CEO+" announces a pay cut",[10,-2,-9,-6],"He hates it. The internet approves."],
+["Ignore it",[-5,1,6,4],"It becomes a recurring joke in coverage."]]},
+c2:{t:"Day 5, 1:00 PM",h:"Who is accountable?",b:"Reporters ask what leadership is giving up.",o:[
+["Pause executive bonuses",[9,-3,-7,-4],"A real concession. Coverage shifts."],
+["\"Leadership is staying the course\"",[-9,1,9,6],"The quote runs next to the yacht photo."]]},
+d1:{t:"Day 8, 10:00 AM",h:"The ones who stayed",b:"Remaining staff morale is rock bottom.",o:[
+["Two weeks of listening sessions",[8,-1,-6,-3],"Slow, honest, and noticed."],
+["An all-hands with pizza and slides",[-6,0,6,3],"Screenshots of the slides circulate."]]},
+d2:{t:"Day 8, 4:00 PM",h:"The boycott",b:"A hashtag urges customers to boycott Nimbus.",o:[
+["Fund a laid-off staff hiring program",[7,-2,-6,-3],"Concrete. Press covers it fairly."],
+["Wait for it to blow over",[-6,1,7,4],"It doesn't, for another week."]]}}];
+var S,sc,si,node,step,last=-1;
+var NM={t:"Trust",s:"Stock",h:"Heat",c:"CEO patience"},KEYS=["t","s","h","c"];
+function cl(x){return Math.max(0,Math.min(100,x))}
+function mt(){var h='<div class="meters">';[["t","Trust",1],["s","Stock",1],["h","Media heat",0],["c","CEO patience",1]].forEach(function(m){var v=S[m[0]],g=m[2]?v:100-v;h+='<div class="m">'+m[1]+'<div class="bar"><i style="width:'+v+'%;background:'+(g>60?"var(--teal)":g>35?"var(--amber)":"var(--red)")+'"></i></div></div>'});return h+'</div>'}
+function hd(t){return '<div class="chy"><b>LIVE</b><span>'+t+'</span></div>'}
+function hero(){return '<div class="hero">'+SV[sc.sv]+'</div>'}
+var PA=["@chipwatch Trust us? From the people who just lied? Pass.","@devrel_jo Moving providers this week. Done.","@mara_k Three statements, zero answers.","@finbro A masterclass in how not to do PR.","@oldtech Remember when this company was good?"],
+PM=["@ana_q Waiting to see if they follow through.","@pm_ravi Better than yesterday. Not great.","@cloudnerd Reading the fine print on that statement."],
+PT=["@sam_eng Credit where due: that was a real answer.","@priya_r Impressed they owned it.","@kofi Staying a customer. For now.","@ines This is how you apologize.","@jules Okay, that actually helped."];
+function feed(){var m=(S.t+100-S.h)/2,u={},h='<div class="feed"><div class="fh"><span>Public feed</span><span>'+(m<30?"Furious":m<45?"Angry":m<60?"Skeptical":m<75?"Warming up":"Trusting")+'</span></div><div class="mood"><i style="left:calc('+m+'% - 3px)"></i></div>';
+for(var n=0;n<4;n++){var r=Math.random()*100,P=m<45?(r<70?PA:PM):m<60?(r<25?PA:r<80?PM:PT):(r<70?PT:PM),c=P===PA?"A":P===PT?"T":"M",x,g=0;do{x=P[Math.floor(Math.random()*P.length)]}while(u[x]&&++g<9);u[x]=1;var w=x.indexOf(" ");h+='<div class="po '+c+'"><div class="av">'+x.charAt(1).toUpperCase()+'</div><div><b>'+x.slice(0,w)+'</b>'+x.slice(w+1)+'</div></div>'}return h+'</div>'}
+var seen={};try{seen=JSON.parse(localStorage.getItem("spinseen")||"{}")}catch(e){}
+function tot(i){var n=0;for(var k in SC[i])if(/^[abcd]\d?$/.test(k))n+=SC[i][k].o.length;return n}
+function cnt(i){var n=0;for(var k in seen)if(k.split(".")[0]==i)n++;return n}
+function trk(){var T=0,C=0;SC.forEach(function(q,i){T+=tot(i);C+=cnt(i)});return '<div class="trk">Branches seen: '+C+' / '+T+'<div class="bar"><i style="width:'+(100*C/T)+'%"></i></div></div>'}
+function dots(){var h='<div class="dots">';for(var k=0;k<4;k++)h+='<i class="'+(k<=step?"on":"")+'"></i>';return h+'</div>'}
+function start(){
+ S={t:45,s:50,h:72,c:60};
+ var k;do{k=Math.floor(Math.random()*SC.length)}while(k===last&&SC.length>1);last=k;si=k;sc=SC[k];node="a";step=0;
+ document.getElementById("app").innerHTML=hd(CO.toUpperCase()+" CRISIS DESK")+hero()+'<div class="card"><span class="case">CASE FILE &middot; '+sc.tag.toUpperCase()+'</span><h1 class="big" style="margin-top:8px">'+sc.n+'</h1><p class="time">You are head of communications at '+CO+'</p><p>'+sc.intro+'</p><p>Four decisions, and each answer sends you down a different path. Keep Trust and Stock up, Media heat down, and the CEO from firing you.</p><p class="quote">Fictional company and characters. A random case is drawn each run.</p><button class="go" id="s">Start the case</button></div>'+trk();
+ document.getElementById("s").onclick=show;
+}
+function show(){
+ var r=sc[node],h=hd(sc.n.toUpperCase()+" &middot; "+r.t.toUpperCase())+hero()+mt()+dots()+'<div class="card"><div class="time">'+r.t+'</div><h2>'+r.h+'</h2><p>'+r.b+'</p></div>';
+ r.o.forEach(function(o,k){h+='<button class="opt" data-k="'+k+'"><strong>'+o[0]+'</strong></button>'});
+ var a=document.getElementById("app");a.innerHTML=h+feed();
+ [].forEach.call(a.querySelectorAll(".opt"),function(b){b.onclick=function(){pick(+b.dataset.k)}});
+ window.scrollTo(0,0);
+}
+function pick(k){
+ var o=sc[node].o[k],a=document.getElementById("app"),fx='<div class="fx">',bk=si+"."+node+"."+k,nw=!seen[bk];seen[bk]=1;try{localStorage.setItem("spinseen",JSON.stringify(seen))}catch(e){}
+ KEYS.forEach(function(key,j){var d=o[1][j]+Math.round((Math.random()-.5)*4);S[key]=cl(S[key]+d);var g=key==="h"?d<0:d>0;fx+='<span class="'+(g?"up":"dn")+'">'+NM[key]+" "+(d>0?"+":"")+d+'</span>'});
+ fx+='</div>';
+ var dead=S.t<=0||S.s<=0||S.c<=0||S.h>=100,nx=o[3]||(node.charAt(0)=="c"?"d"+node.charAt(1):null);
+ a.innerHTML=hd("YOUR CALL")+hero()+mt()+dots()+'<div class="card"><div class="hd" style="font-size:22px">'+o[0]+(nw?'<span class="nw">NEW BRANCH</span>':'')+'</div><p>'+o[2]+'</p>'+fx+'<button class="go" id="n">'+(dead||!nx?"See how it ended":"Next development")+'</button></div>'+feed();
+ document.getElementById("n").onclick=function(){if(dead||!nx)end();else{node=nx;step++;show()}};
+}
+function end(){
+ var sco=S.t+S.s+(100-S.h)+S.c,ti,tx;
+ if(S.c<=0){ti="You're fired";tx=CEO+" has had enough. Your badge stops working at 4:12 PM."}
+ else if(S.t<=0){ti="Trust collapsed";tx="Nobody believes anything Nimbus says now. The board wants a new communications chief."}
+ else if(S.s<=0){ti="Stock freefall";tx="The board calls an emergency meeting. You're not invited."}
+ else if(S.h>=100){ti="Total meltdown";tx="The story outran every statement. Nimbus is now a crisis-comms case study."}
+ else if(sco>=270){ti="Crisis averted, mostly";tx="The story becomes how Nimbus responded, not what went wrong."}
+ else if(sco>=215){ti="Bruised but standing";tx="Nimbus survives. The press moves on. The CEO sends a thumbs-up emoji."}
+ else{ti="Barely made it";tx="The company lives. Your reputation takes a hit. You update your resume anyway."}
+ document.getElementById("app").innerHTML=hd("CASE CLOSED: "+sc.n.toUpperCase())+hero()+mt()+'<div class="card"><div class="time">Final result</div><h2 class="big">'+ti+'</h2><p>'+tx+'</p><p class="time">Score: '+Math.round(sco)+' / 400</p><button class="go" id="r">Draw a new case</button></div>'+trk()+feed();
+ document.getElementById("r").onclick=start;
+}
+start();
+</script>
+</body>
+</html>
