@@ -1,0 +1,5 @@
+{
+  "name": "spin-cycle",
+  "scripts": { "start": "serve . -l $PORT" },
+  "dependencies": { "serve": "^14.2.0" }
+}
